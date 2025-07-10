@@ -3,6 +3,11 @@ module "rg_name" {
   resource = var.resource
   location = var.location
 }
+module "rg_name2" {
+  source   = "../chield-module/azurerm_resource_group"
+  resource = var.resource
+  location = var.location
+}
 module "vnet" {
   depends_on    = [module.rg_name]
   source        = "../chield-module/azurerm_vnet"
