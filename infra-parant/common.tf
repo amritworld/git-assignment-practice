@@ -3,7 +3,10 @@ module "rg_name" {
   resource = var.resource
   location = var.location
 }
+
+module "rg_name2" {
 module "rg_name1" {
+
   source   = "../chield-module/azurerm_resource_group"
   resource = var.resource
   location = var.location
